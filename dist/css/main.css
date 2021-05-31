@@ -1,0 +1,449 @@
+/*
+----------------------
+Mini map css style
+-------------------
+
+
+----------------------
+*/
+/* Start Normalize */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%; }
+
+main {
+  display: block; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+a {
+  background-color: transparent;
+  text-decoration: none; }
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted; }
+
+b,
+strong {
+  font-weight: bolder; }
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+img {
+  border-style: none; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0; }
+
+button,
+input {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal; }
+
+progress {
+  vertical-align: baseline; }
+
+textarea {
+  overflow: auto; }
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit; }
+
+details {
+  display: block; }
+
+summary {
+  display: list-item; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+button {
+  padding: 0; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+* {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: "Mont";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+  font-display: block; }
+
+@font-face {
+  font-family: "Mont-sb";
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf");
+  font-display: block; }
+
+@font-face {
+  font-family: "Mont-b";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+  font-display: block; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4; }
+
+.order {
+  display: flex;
+  width: 100%;
+  max-width: 1120px;
+  height: 500px;
+  font-family: "Mont"; }
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: 40px 40px;
+  background: linear-gradient(180deg, #428A60 0%, #35734f 100%);
+  overflow: hidden; }
+  .product::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 33px;
+    width: 398px;
+    height: 398px;
+    background: #428A60;
+    border-radius: 50%; }
+  .product::after {
+    content: "";
+    position: absolute;
+    right: -363px;
+    top: -94px;
+    width: 688px;
+    height: 688px;
+    border: 20px solid #fff;
+    opacity: 0.03;
+    border-radius: 50%; }
+  .product__title {
+    font-family: "Mont-sb";
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+    color: #fff; }
+  .product__sub-title {
+    font-family: "Mont-sb";
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+    color: #fff;
+    text-transform: uppercase; }
+  .product__image-wrap {
+    z-index: 1;
+    position: absolute;
+    bottom: 33px;
+    right: 38px;
+    width: 465px;
+    height: 255px; }
+  .product__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; }
+
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-top: 29px;
+  background: #fff;
+  box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.1); }
+  .form-wrap__title {
+    width: 100%;
+    max-width: 303px;
+    margin-left: 128px;
+    margin-bottom: 81px;
+    font-family: "Mont-b";
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 130%;
+    text-align: center;
+    color: #212121; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  margin-left: 117px; }
+  .form__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    background: #428A60;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    color: #fff;
+    transition: 0.3s background ease; }
+  .form__btn-arrow {
+    width: 18px;
+    height: 12px;
+    margin-left: 10px;
+    fill: "none";
+    transition: 0.3s transform ease; }
+  .form:hover .form__btn {
+    background: #35734f; }
+  .form:hover .form__btn-arrow {
+    transform: translateX(10px); }
+  .form__secure {
+    display: none;
+    align-self: center;
+    margin-top: auto; }
+  .form__secure-word {
+    font-family: "Mont-sb";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: #212121; }
+  .form__secure-lock {
+    margin: 0 20px; }
+
+.input-wrap {
+  display: flex;
+  flex-direction: column; }
+
+.label {
+  margin-bottom: 10px;
+  font-family: "Mont-b";
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
+  .label__last-word {
+    color: #428A60; }
+
+.input {
+  padding: 16px 20px;
+  background: #f8f8f8;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  font-family: "Mont";
+  font-weight: 600;
+  font-size: 14px;
+  color: #212121; }
+  .input::placeholder {
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 14px;
+    color: #212121;
+    opacity: 0.2; }
+  .input:active, .input:focus {
+    outline: none;
+    border: 1px solid #8a8989;
+    border-radius: 5px; }
+
+.input-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 38px; }
+  .input-container .input {
+    width: 100%;
+    max-width: 184px; }
+
+.select {
+  width: 100%;
+  max-width: 116px;
+  padding: 16px 20px;
+  background: #f8f8f8;
+  border: 1px solid #e4e4e4;
+  font-family: "Mont";
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 130%;
+  border-radius: 5px;
+  color: #212121; }
+  .select__icon {
+    display: block;
+    width: 26px;
+    height: 18px;
+    background-image: url("/dist/images/form_icon/ru_flag.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+@media screen and (max-width: 321px) {
+  .wrapper {
+    justify-content: center;
+    min-height: 848px;
+    overflow-x: hidden; }
+  .order {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+    padding: 40px 0;
+    box-shadow: 0px 24px 80px 0 rgba(0, 0, 0, 0.1); }
+  .product,
+  .form-wrap {
+    width: 100%; }
+  .product {
+    flex-direction: row;
+    flex-shrink: 0;
+    width: 280px;
+    height: 234px;
+    margin-bottom: 37px;
+    padding: 0px 0px;
+    background: transparent; }
+    .product::before {
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 202px;
+      height: 202px; }
+    .product::after {
+      display: none; }
+    .product__image-wrap {
+      left: 36px;
+      bottom: 0;
+      width: 223px;
+      height: 122px; }
+    .product__title, .product__sub-title {
+      color: #000; }
+  .form-wrap {
+    height: 416px;
+    padding: 0 20px;
+    box-shadow: none; }
+  .form-wrap__title {
+    margin-bottom: 28px; }
+  .form-wrap__title,
+  .form {
+    margin-left: 0; }
+  .input {
+    padding: 16px 10px; }
+  .input-container .input {
+    max-width: 174px; }
+  .select {
+    max-width: 96px;
+    padding: 16px 10px; }
+  .option {
+    max-width: 96px;
+    padding: 16px 10px; }
+  .form__secure {
+    display: flex; } }

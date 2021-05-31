@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dist/css/nice-select.css">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="order">
+
+            <div class="product">
+                <h1 class="product__title">Reduslim</h1>
+                <span class="product__sub-title">Eco</span>
+
+                <div class="product__image-wrap">
+                    <img class="product__image" src="dist/images/product/reduslim.png" alt="Reduslim">
+                </div>
+
+            </div>
+
+            <div class="form-wrap">
+                <h2 class="form-wrap__title">Сделай шаг к выздоровлению</h2>
+
+                <form class="form" action="">
+                    <div class="input-wrap">
+                        <label class="label" for="">Ваше <span class="label__last-word">имя</span></n></label>
+                        <input class="input" type="text" name placeholder="Алексей">
+                    </div>
+
+                    <div class="input-container">
+                        <div class="input-wrap">
+                            <label class="label" for="">Ваш <span class="label__last-word">телефон</span></label>
+                            <input class="input" type="tel" name="" placeholder="+7 (123) 456 78-90">
+                        </div>
+
+
+                        <select class="select" name="">
+                            <option value="">Ru <div class="select__icon"></div>
+                            </option>
+                            <option value="1">En <div class="select__icon"></div>
+                            </option>
+                            <option value="2">Fr <div class="select__icon"></div>
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <button class="form__btn" type="submit">Заказать
+                        <svg class="form__btn-arrow" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 6H16.5M16.5 6L11.5 1M16.5 6L11.5 11" stroke="white" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="form__secure">
+                    <span class="form__secure-word">Trusted</span>
+                    <span class="form__secure-lock">
+                        <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="5.71429" width="12.1429" height="9.28572" rx="3" fill="#428A60" />
+                            <path
+                                d="M3.14282 3.92857C3.14282 2.31116 4.45399 1 6.07139 1C7.6888 1 8.99997 2.31117 8.99997 3.92857V6.85714H3.14282V3.92857Z"
+                                stroke="#428A60" stroke-width="2" />
+                        </svg>
+                    </span>
+                    <span class="form__secure-word">Secure</span>
+                </div>
+            </div><!-- form wrap end -->
+
+        </div><!-- order end -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="dist/js/jquery.nice-select.min.js"></script>
+    <script src="dist/js/main.js"></script>
+</body>
+
+</html>
